@@ -31,35 +31,33 @@ const Hero = () => {
           {/* Main Hero Content */}
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-              Technical Business
-              <span className="block text-gray-200">Strategist</span>
+              Strategic Developer, Thinker
+              <span className="block text-gray-200">& Solution Architect</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto">
-              I bridge the gap between complex technical solutions and real business impact.
+              I don't just code - I solve complex problems by bridging technical execution with strategic thinking and user-centered design.
             </p>
             
             <div className="text-lg text-gray-200 max-w-4xl mx-auto">
               <p className="mb-6">
-                From managing villa operations to designing scalable SaaS platforms,
-                I solve problems others don't even see.
-              </p>
+                From architecting healthcare platforms to designing revolutionary advertising ecosystems, I transform market opportunities into scalable solutions that drive real business impact.              </p>
             </div>
           </div>
 
           {/* Professional Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">3+</div>
-              <div className="text-sm text-gray-300 font-medium">Years Experience</div>
+              <div className="text-3xl font-bold text-white mb-2">Strategy</div>
+              <div className="text-sm text-gray-300 font-medium">+ Technical Execution</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">15+</div>
-              <div className="text-sm text-gray-300 font-medium">Projects Completed</div>
+              <div className="text-3xl font-bold text-white mb-2">Design</div>
+              <div className="text-sm text-gray-300 font-medium">+ Development</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-sm text-gray-300 font-medium">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-white mb-2">Leadership</div>
+              <div className="text-sm text-gray-300 font-medium">+ Innovation</div>
             </div>
           </div>
 
