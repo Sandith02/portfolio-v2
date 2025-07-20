@@ -1,144 +1,165 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const About = () => {
-  return (
-    <section id="about" className="py-24 px-6 relative overflow-hidden">
-      
-      {/* Subtle background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 rounded-full opacity-5" style={{ backgroundColor: '#394a43' }}></div>
-        <div className="absolute bottom-32 left-16 w-96 h-96 rounded-full opacity-3" style={{ backgroundColor: '#394a43' }}></div>
-      </div>
+  const [activeStory, setActiveStory] = useState(0);
 
-      <div className="container mx-auto max-w-5xl relative z-10">
+  const stories = [
+    {
+      title: "The Problem I Saw",
+      content: "While everyone was building apps, I noticed something: we were solving the wrong problems. Healthcare needed connection, not just digitization. Advertising needed value exchange, not interruption.",
+      highlight: "Most developers build features. I question the entire premise."
+    },
+    {
+      title: "The Breakthrough Moment", 
+      content: "Leading DoctorAid taught me that the best products don't just work—they fundamentally change how people think about a problem. That's when I realized I wasn't just a developer anymore.",
+      highlight: "I stopped coding solutions and started designing experiences."
+    },
+    {
+      title: "The Strategic Shift",
+      content: "At IEEE, I learned that influence comes from understanding systems, not just code. The most impactful decisions happen in the room where strategy meets execution.",
+      highlight: "I became the bridge between what's possible and what's profitable."
+    }
+  ];
+
+  return (
+    <section id="about" className="py-24 px-6 relative">
+      <div className="container mx-auto max-w-6xl">
         
-        {/* Minimal Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-            Beyond Development
-          </h2>
-          <p className="text-2xl text-gray-600 max-w-2xl mx-auto font-light">
-            Where strategic thinking meets technical execution
-          </p>
+        {/* Unconventional Header */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Plot Twist:
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              I started as a developer who could code anything.
+              <br />
+              <span className="font-semibold" style={{ color: '#394a43' }}>
+                Now I'm the person who decides what's worth coding.
+              </span>
+            </p>
+          </div>
         </div>
 
-        {/* Story Section - More Visual */}
+        {/* Interactive Story Timeline */}
         <div className="mb-24">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                I don't just build products—I reimagine possibilities
-              </h3>
+            {/* Story Navigation */}
+            <div className="flex justify-center mb-12">
+              <div className="inline-flex bg-gray-100 rounded-full p-2">
+                {stories.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveStory(index)}
+                    className={`px-6 py-3 rounded-full transition-all duration-300 font-medium ${
+                      activeStory === index 
+                        ? 'text-white shadow-lg' 
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                    style={activeStory === index ? { backgroundColor: '#394a43' } : {}}
+                  >
+                    Chapter {index + 1}
+                  </button>
+                ))}
+              </div>
             </div>
-            
-            {/* Key Points with Animation */}
-            <div className="space-y-12">
-              <div className="flex items-center justify-center">
-                <div className="max-w-3xl text-center">
-                  <div className="text-lg text-gray-700 leading-relaxed space-y-6">
-                    <p className="text-xl">
-                      From <span className="font-semibold" style={{ color: '#394a43' }}>healthcare platforms</span> that transform patient care 
-                      to <span className="font-semibold" style={{ color: '#394a43' }}>advertising ecosystems</span> that reward attention, 
-                      I create solutions that matter.
-                    </p>
-                    <p>
-                      As <strong>IEEE Public Visibility Vice Chair</strong>, I've learned that the most impactful innovations 
-                      happen when you understand both the technology and the human story behind it.
-                    </p>
-                  </div>
-                </div>
+
+            {/* Active Story */}
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                {stories[activeStory].title}
+              </h3>
+              <p className="text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+                {stories[activeStory].content}
+              </p>
+              <div className="inline-block bg-gradient-to-r from-gray-50 to-gray-100 px-8 py-4 rounded-2xl">
+                <p className="text-lg font-semibold" style={{ color: '#394a43' }}>
+                  {stories[activeStory].highlight}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Interactive Capabilities */}
+        {/* "Day in the Life" Section */}
         <div className="mb-24">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-16">
-            What I Bring to the Table
+            While others are still asking "How?"
+            <br />
+            <span style={{ color: '#394a43' }}>I'm already solving "Why?"</span>
           </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Strategy */}
-            <div className="group cursor-pointer">
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#394a43' }}>
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Strategic Vision</h4>
-                  <p className="text-gray-600">See opportunities others miss. Design business models that redefine markets.</p>
+
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left: Traditional Approach */}
+            <div>
+              <h4 className="text-2xl font-bold text-gray-400 mb-6">Traditional Developer</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                  <span>Builds what's requested</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                  <span>Focuses on clean code</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                  <span>Delivers features on time</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                  <span>Waits for requirements</span>
                 </div>
               </div>
             </div>
 
-            {/* Technical */}
-            <div className="group cursor-pointer">
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#394a43' }}>
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Technical Execution</h4>
-                  <p className="text-gray-600">Turn complex ideas into scalable solutions. MERN stack, React Native, cloud architecture.</p>
+            {/* Right: My Approach */}
+            <div>
+              <h4 className="text-2xl font-bold mb-6" style={{ color: '#394a43' }}>Strategic Developer</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#394a43' }}></div>
+                  <span className="font-medium">Questions what should be built</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Leadership */}
-            <div className="group cursor-pointer">
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#394a43' }}>
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Cross-Functional Leadership</h4>
-                  <p className="text-gray-600">Bridge technical teams and business stakeholders. Lead through influence and vision.</p>
+                <div className="flex items-center space-x-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#394a43' }}></div>
+                  <span className="font-medium">Designs business impact</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#394a43' }}></div>
+                  <span className="font-medium">Creates market opportunities</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#394a43' }}></div>
+                  <span className="font-medium">Shapes the requirements</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Impact Numbers - More Dynamic */}
+        {/* Reality Check Section */}
         <div className="text-center">
-          <div className="inline-block">
-            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-12 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">
-                Creating Impact That Matters
-              </h3>
-              
-              <div className="flex flex-wrap justify-center gap-12">
-                <div className="text-center">
-                  <div className="text-4xl font-bold mb-2" style={{ color: '#394a43' }}>Healthcare</div>
-                  <p className="text-gray-600">Platform Innovation</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-4xl font-bold mb-2" style={{ color: '#394a43' }}>IEEE</div>
-                  <p className="text-gray-600">Leadership Role</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-4xl font-bold mb-2" style={{ color: '#394a43' }}>Strategic</div>
-                  <p className="text-gray-600">Business Models</p>
-                </div>
-              </div>
-
-              <div className="mt-10">
-                <button 
-                  className="text-white px-10 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
-                  style={{ backgroundColor: '#394a43' }}
-                >
-                  Let's Create Something Together
-                </button>
-              </div>
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-6">
+              Here's the thing about strategic thinking:
+            </h3>
+            <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+              Anyone can learn to code. Not everyone can see what's missing in the market, 
+              design solutions that users didn't know they needed, and convince teams to build them.
+            </p>
+            <div className="inline-block bg-white text-gray-900 px-8 py-4 rounded-2xl">
+              <p className="text-lg font-semibold">
+                That's exactly what companies need in 2025.
+              </p>
+            </div>
+            
+            <div className="mt-10">
+              <button 
+                className="bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Let's Build the Future Together
+              </button>
             </div>
           </div>
         </div>
