@@ -105,7 +105,7 @@ const Header = () => {
                   : 'bg-white text-slate-800 hover:bg-slate-100 shadow-lg'
               }`}
             >
-              Let's Connect
+              #MySpace
             </button>
           </div>
 
@@ -148,7 +148,7 @@ const Header = () => {
                   onClick={() => handleNavClick('#contact')}
                   className="w-full px-3 py-2.5 bg-slate-800 text-white rounded-lg text-sm font-medium hover:bg-slate-700 transition-colors duration-200"
                 >
-                  Let's Connect
+                  #MySpace
                 </button>
               </div>
             </div>
