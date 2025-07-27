@@ -66,7 +66,7 @@ const Header = () => {
               <h1 className={`font-bold tracking-tight transition-colors duration-300 ${
                 isScrolled ? 'text-slate-800' : 'text-white'
               }`}>
-                Sandith Thenuwara
+                #TheStrategistInMe
               </h1>
               <p className={`text-xs transition-colors duration-300 ${
                 isScrolled ? 'text-slate-600' : 'text-slate-300'

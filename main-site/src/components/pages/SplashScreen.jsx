@@ -120,7 +120,7 @@ const SplashScreen = ({ onComplete }) => {
           {/* Professional Header */}
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-slate-800 mb-2 tracking-tight">
-              Sandith Sithmaka Thenuwara
+              #TheStrategistInMe
             </h1>
             <div className="space-y-1">
               <p className="text-sm font-medium text-slate-600">
@@ -146,9 +146,9 @@ const SplashScreen = ({ onComplete }) => {
             
             {/* Loading Status */}
             <div className="space-y-2">
-              <p className="text-sm font-medium text-slate-600">
+              {/* <p className="text-sm font-medium text-slate-600">
                 {loadingStep}
-              </p>
+              </p> */}
               {/* <p className="text-xs text-slate-400 font-mono">
                 {Math.round(progress)}% Complete
               </p> */}
