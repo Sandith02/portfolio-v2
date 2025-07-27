@@ -161,7 +161,6 @@ const SplashScreen = ({ onComplete }) => {
       <div className="absolute bottom-8 left-0 right-0">
         <div className="text-center space-y-1">
           <p className="text-xs text-slate-400 font-medium">
-            © 2025 Sandith Sithmaka Thenuwara
           </p>
           
         </div>
