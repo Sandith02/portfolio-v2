@@ -57,55 +57,55 @@ const Hero = () => {
         }
       `}</style>
 
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 relative z-10">
+      <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           
           {/* Main Hero Content */}
-          <div className="mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 tracking-tight leading-tight animate-fade-in-up">
+          <div className="mb-12">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight animate-fade-in-up">
               Strategic Developer, Thinker
               <span className="block text-gray-200 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>& Solution Architect</span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto animate-fade-in-up px-2" style={{ animationDelay: '0.6s' }}>
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               I don't just code - I solve complex problems by bridging technical execution with strategic thinking and user-centered design.
             </p>
             
-            <div className="text-sm sm:text-base md:text-lg text-gray-200 max-w-4xl mx-auto animate-fade-in-up px-2" style={{ animationDelay: '0.9s' }}>
-              <p className="mb-4 sm:mb-6">
+            <div className="text-lg text-gray-200 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+              <p className="mb-6">
                 From architecting healthcare platforms to designing revolutionary advertising ecosystems, I transform market opportunities into scalable solutions that drive real business impact.
               </p>
             </div>
           </div>
 
           {/* Professional Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
-            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">Strategy</div>
-              <div className="text-xs sm:text-sm text-gray-300 font-medium">+ Technical Execution</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
+            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
+              <div className="text-3xl font-bold text-white mb-2">Strategy</div>
+              <div className="text-sm text-gray-300 font-medium">+ Technical Execution</div>
             </div>
-            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.4s' }}>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">Design</div>
-              <div className="text-xs sm:text-sm text-gray-300 font-medium">+ Development</div>
+            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.4s' }}>
+              <div className="text-3xl font-bold text-white mb-2">Design</div>
+              <div className="text-sm text-gray-300 font-medium">+ Development</div>
             </div>
-            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.6s' }}>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">Leadership</div>
-              <div className="text-xs sm:text-sm text-gray-300 font-medium">+ Innovation</div>
+            <div className="text-center transform hover:scale-105 transition-all duration-300 hover:bg-white hover:bg-opacity-10 p-4 rounded-xl animate-fade-in-up" style={{ animationDelay: '1.6s' }}>
+              <div className="text-3xl font-bold text-white mb-2">Leadership</div>
+              <div className="text-sm text-gray-300 font-medium">+ Innovation</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-fade-in-up px-4" style={{ animationDelay: '1.8s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '1.8s' }}>
             <button
               onClick={handleContactClick}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg transform hover:shadow-2xl"
+              className="px-8 py-4 bg-white text-black rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg transform hover:shadow-2xl"
             >
               Let's Work Together
             </button>
             
             <button
               onClick={handleProjectsClick}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-full text-base sm:text-lg font-medium hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 transform"
+              className="px-8 py-4 border-2 border-white text-white rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 transform"
             >
               View My Work
             </button>
@@ -114,11 +114,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator - Hidden on small screens, visible on larger screens */}
-      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
+      {/* Scroll Indicator - Fixed positioning */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex flex-col items-center space-y-2 text-gray-300">
           <span className="text-xs font-medium">Scroll to explore</span>
-          <div className="w-0.5 h-6 sm:h-8 bg-gray-300 animate-pulse"></div>
+          <div className="w-0.5 h-8 bg-gray-300 animate-pulse"></div>
         </div>
       </div>
     </div>
