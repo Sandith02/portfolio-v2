@@ -7,7 +7,7 @@ const Experience = () => {
   const experiences = [
     {
       id: 'villa-operations',
-      company: 'Villa 54 by Glamour',
+      company: 'Villa 54 by GLAMOUR Co.',
       role: 'Operations Manager',
       type: 'Family Business',
       period: '2023 - Present',

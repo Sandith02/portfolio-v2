@@ -110,9 +110,9 @@ const Projects = () => {
         'Stakeholder Mapping'
       ],
       metrics: {
-        market: 'Major Problem',
-        research: '100+ Pages',
-        models: '5 Revenue Streams'
+        market: 'Saturated',
+        research: 'Full Analysis',
+        models: 'Revenue Streams'
       },
       tech: ['Business Architecture', 'Market Analysis', 'Strategic Planning'],
       links: {
