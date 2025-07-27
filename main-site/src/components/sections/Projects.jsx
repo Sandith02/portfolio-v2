@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 'doctoraid',
       title: 'DoctorAid Healthcare Platform',
-      subtitle: 'Product Manager & Tech Lead',
+      subtitle: 'Product Manager, Designer & Tech Lead',
       period: 'Oct 2024 - Mar 2025',
       status: 'Live MVP',
       description: 'Led university coursework project to build healthcare platform connecting patients with doctors. Managed cross-functional team of 5 developers through complete MVP development and deployment.',
@@ -59,7 +59,8 @@ const Projects = () => {
       },
       tech: ['React', 'JSON Config', 'PWA', 'Static Generation'],
       links: {
-        demo: '#'
+        demo: 'https://the-villa-54.vercel.app/',
+        github: 'https://github.chttps://github.com/Sandith02/glamour_tech_villa_management_suiteom/DoctorAid'
       }
     },
     {
@@ -87,7 +88,7 @@ const Projects = () => {
       },
       tech: ['React', 'JSON Config', 'PWA', 'Multi-tenant'],
       links: {
-        docs: '#'
+     
       }
     },
     {
@@ -109,7 +110,7 @@ const Projects = () => {
         'Stakeholder Mapping'
       ],
       metrics: {
-        market: '$50B Problem',
+        market: 'Major Problem',
         research: '100+ Pages',
         models: '5 Revenue Streams'
       },

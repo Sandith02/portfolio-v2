@@ -35,7 +35,7 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I turn complex business challenges into elegant technical solutions. Currently developing platforms 
-            that solve real problems—from healthcare accessibility to advertising transparency—while leading 
+            that solve real problems, from healthcare accessibility to advertising transparency, while leading 
             teams and learning what it takes to build products people actually need.
           </p>
         </div>
@@ -49,7 +49,7 @@ const About = () => {
                 { number: 'DoctorAid', label: 'Healthcare Platform', desc: 'Connecting patients & doctors' },
                 { number: 'Unskiip', label: 'Ad Platform', desc: 'Solving 97% skip crisis' },
                 { number: 'Villa QR', label: 'Tourism Tech', desc: 'Digital villa presence' },
-                { number: '2nd Year', label: 'CS Student', desc: 'University of Westminster' }
+                { number: '2nd Year', label: 'CS Student', desc: 'IIT | UOW' }
               ].map((metric, index) => (
                 <div key={metric.label} className="text-center">
                   <div className="text-3xl font-bold text-[#394a43] mb-2">{metric.number}</div>
